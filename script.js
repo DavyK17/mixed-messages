@@ -14,16 +14,16 @@ const scriptInit = () => {
         const lcResponse = response.toLowerCase();
         const scriptCont = () => {
             if (lcResponse === "yes") {
-                console.log("\nFantastic! Let's begin!");
+                console.log("\nFantastic! Let's begin!\n");
             } else if (lcResponse === "no") {
-                console.log("\nWell that's a shame; you don't really have a choice. Time for some jokes!")
+                console.log("\nWell that's a shame; you don't really have a choice. Time for some jokes!\n")
             } else {
-                console.log("\nI didn't understand that, but no matter ... let's get to these jokes!")
+                console.log("\nI didn't understand that, but no matter ... let's get to these jokes!\n")
             }
         }
 
         setTimeout(scriptCont, 500);
-        setTimeout(jokeGen, 1000);
+        setTimeout(jokeGen, 2000);
         readline.close();
     });
 }
@@ -52,6 +52,36 @@ const jokeGen = () => {
             answers: ["space bar", "spacebar", "the space bar", "the spacebar"],
             response: "The SPACE BAR!",
         },
+        {
+            question: "What did the coffee report to the police?",
+            answers: ["mugging", "the mugging", "a mugging"],
+            response: "A MUGGING!",
+        },
+        {
+            question: "What's orange and sounds like a parrot?",
+            answers: ["carrot", "a carrot"],
+            response: "A CARROT!",
+        },
+        {
+            question: "Did you know the first French fries weren't actually cooked in France? (They were cooked in...)",
+            answers: ["greece"],
+            response: "...GREECE!",
+        },
+        {
+            question: "When does a dad joke become a dad joke? (When it becomes...)",
+            answers: ["apparent", "a parent"],
+            response: "...APPARENT!",
+        },
+        {
+            question: "What do you someone with no body and no nose?",
+            answers: ["nobody knows"],
+            response: "NOBODY KNOWS!",
+        },
+        {
+            question: "What is the least spoken language in the world?",
+            answers: ["sign language"],
+            response: "SIGN LANGUAGE!",
+        }
     ];
     const randNum = Math.floor(Math.random() * jokes.length);
 
@@ -64,6 +94,8 @@ const jokeGen = () => {
             } else {
                 console.log(`\n${jokes[randNum]["response"]} Hahahahahaha xD`);
             }
+
+            setTimeout(goAgain, 1000);
         }
 
         setTimeout(responseGen, 500);
@@ -99,4 +131,4 @@ const goAgain = () => {
 
 /* CALLING FUNCTIONS */
 
-jokeGen();
+scriptInit();
