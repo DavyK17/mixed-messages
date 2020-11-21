@@ -1,16 +1,18 @@
 /* REQUIRING NODE.JS READLINE MODULE */
 
+const { read } = require('fs');
+
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-/* GREETING */
+/* PROGRAM START (GREETING) */
 
-const greeting = () => {
-    readline.question("Welcome, stranger! Are you ready to have a good laugh? (Yes/No) \n>> ", response => {
+const scriptInit = () => {
+    readline.question("Welcome, stranger! Are you ready to have a good laugh? (Yes/No)\n>> ", response => {
         const trueResponse = response.toLowerCase();
-        const responseGen = () => {
+        const scriptCont = () => {
             if (trueResponse === "yes") {
                 console.log("\nFantastic! Let's begin!");
             } else if (trueResponse === "no") {
@@ -20,11 +22,28 @@ const greeting = () => {
             }
         }
 
-        setTimeout(responseGen, 500);
+        setTimeout(scriptCont, 500);
+        setTimeout(jokeGen, 1000);
         readline.close();
     });
 }
 
-/* CALLING FUNCTIONS */
+/* JOKE RANDOMISER */
 
-greeting();
+const jokeGen = () => {
+    const disappointed = "Way to go. You ruined my punchline.";
+    readline.question("What do you call a government contract signed in a pub?\n>> ", response => {
+        const lcResponse = response.toLowerCase();
+        const answers = ["bartender", "bar tender"];
+        const responseGen = () => {
+            if (answers.includes(lcResponse)) {
+                console.log(disappointed);
+            } else {
+                console.log("A BAR TENDER! Hahahahahaha xD");
+            }
+        }
+
+        setTimeout(responseGen, 1000);
+        readline.close();
+    });
+}
