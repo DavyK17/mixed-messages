@@ -71,12 +71,12 @@ const jokeGen = () => {
         },
         {
             question: "What do you call someone with no body and no nose?",
-            answers: ["nobody knows"],
+            answers: ["nobody knows", "no body knows"],
             response: "NOBODY KNOWS!",
         },
         {
             question: "What is the least spoken language in the world?",
-            answers: ["sign language"],
+            answers: ["sign language", "sign-language", "signlanguage", "sign"],
             response: "SIGN LANGUAGE!",
         }
     ];
