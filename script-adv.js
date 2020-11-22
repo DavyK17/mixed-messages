@@ -22,7 +22,6 @@ const scriptInit = () => {
 
         setTimeout(scriptCont, 500);
         setTimeout(jokeGen, 2000);
-        readline.close();
     });
 }
 
@@ -97,7 +96,6 @@ const jokeGen = () => {
         }
 
         setTimeout(responseGen, 500);
-        readline.close();
     });
 }
 
@@ -105,21 +103,30 @@ const jokeGen = () => {
 
 const goAgain = () => {
     const questions = ["Ready for another one?", "Wanna go again?", "Keep it going? I've got plenty more!", "Wanna laugh some more?", "Would you like another joke?"];
-    const randNum = Math.floor(Math.random() * questions.length);
+    const randQuestion = Math.floor(Math.random() * questions.length);
 
-    readline.question(`${questions[randNum]} (Yes/No)\n>> `, response => {
+    const yesArray = ["Yes!", "Sweet!", "Great!", "Fantastic!", "Fabulous!", "Yay!"];
+    const randYes = Math.floor(Math.random() * yesArray.length);
+
+    readline.question(`\n${questions[randQuestion]} (Yes/No)\n>> `, response => {
         const lcResponse = response.toLowerCase();
         if (lcResponse === "yes") {
-            console.log("\nSweet!\n");
-            setTimeout(jokeGen, 1000);
+            setTimeout(() => {
+                console.log(`\n${yesArray[randYes]}\n`);
+            }, 500);
+            setTimeout(jokeGen, 1500);
         } else if (lcResponse === "no") {
-            console.log("\nBummer. Until next time, then!");
+            setTimeout(() => {
+                console.log("\nBummer. Until next time, then!");
+                readline.close();
+                process.exit(0);
+            }, 500);
         } else {
-            console.log("\nI didn't catch that, but I'm guessing you wanna go again. Sweet!\n");
-            setTimeout(jokeGen, 1000);
+            setTimeout(() => {
+                console.log("\nI didn't catch that, but I'm guessing you wanna go again. Sweet!\n")
+            }, 500);
+            setTimeout(jokeGen, 1500);
         }
-
-        readline.close();
     });
 }
 
