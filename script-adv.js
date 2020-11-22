@@ -71,7 +71,7 @@ const jokeGen = () => {
             response: "...APPARENT!",
         },
         {
-            question: "What do you someone with no body and no nose?",
+            question: "What do you call someone with no body and no nose?",
             answers: ["nobody knows"],
             response: "NOBODY KNOWS!",
         },
