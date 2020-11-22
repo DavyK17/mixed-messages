@@ -106,14 +106,10 @@ const jokeGen = () => {
 /* REPEAT SEQUENCE */
 
 const goAgain = () => {
-    const randomQuestion = () => {
-        const questions = ["Ready for another one?", "Wanna go again?", "Keep it going? I've got plenty more!", "Wanna laugh some more?", "Would you like another joke?"];
-        const randNum = Math.floor(Math.random() * questions.length);
+    const questions = ["Ready for another one?", "Wanna go again?", "Keep it going? I've got plenty more!", "Wanna laugh some more?", "Would you like another joke?"];
+    const randNum = Math.floor(Math.random() * questions.length);
 
-        return questions[randNum] + " (Yes/No)\n>> ";
-    }
-
-    readline.question(randomQuestion(), response => {
+    readline.question(`${questions[randNum]} (Yes/No)\n>> `, response => {
         const lcResponse = response.toLowerCase();
         if (lcResponse === "yes") {
             console.log("\nSweet!\n");
