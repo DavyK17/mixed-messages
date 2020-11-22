@@ -57,6 +57,6 @@ const jokeGen = () => {
     }, 5000);
 }
 
-/* CALLING FUNCTIONS */
+/* CALLING FUNCTION */
 
 jokeGen();
