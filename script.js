@@ -40,6 +40,46 @@ const jokeGen = () => {
         {
             question: "What is the least spoken language in the world?",
             response: "SIGN LANGUAGE!",
+        },
+        {
+            question: "What does a baby computer call his father?",
+            response: "DATA!",
+        },
+        {
+            question: "What do you call an illegally parked frog?",
+            response: "A TOAD!",
+        },
+        {
+            question: "How does a leopard change its spots?",
+            response: "By MOVING!",
+        },
+        {
+            question: "Why can't you trust atoms?",
+            response: "They MAKE UP EVERYTHING!",
+        },
+        {
+            question: "Did you hear about the pencil with two erasers?",
+            response: "It was POINTLESS!",
+        },
+        {
+            question: "How many tickles does it take to make an octopus laugh?",
+            response: "TEN TICKLES!",
+        },
+        {
+            question: "How do you organise a space party?",
+            response: "You PLANET!",
+        },
+        {
+            question: "What do you call a fake noodle?",
+            response: "An IMPASTA!",
+        },
+        {
+            question: "How do celebrities stay cool?",
+            response: "An IMPASTA!",
+        },
+        {
+            question: "Which town do you go to if you want a good scare?",
+            response: "Kiam-BOO!",
         }
     ];
     const randNum = Math.floor(Math.random() * jokes.length);
