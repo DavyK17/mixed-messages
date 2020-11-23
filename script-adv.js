@@ -152,7 +152,7 @@ const jokeGen = () => {
                 console.log(`\n${jokes[randJoke]["response"]} ${laughs[randLaugh]}`);
             }
 
-            setTimeout(goAgain, 1000);
+            setTimeout(goAgain, 2500);
         }
 
         setTimeout(responseGen, 500);
