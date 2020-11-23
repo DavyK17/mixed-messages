@@ -85,16 +85,12 @@ const jokeGen = () => {
     const randNum = Math.floor(Math.random() * jokes.length);
 
     setTimeout(() => {
-        console.log(jokes[randNum]["question"]);
+        console.log(`${jokes[randNum]["question"]}\n`);
     }, 500);
 
     setTimeout(() => {
-        console.log("\n...\n");
-    }, 2500);
-
-    setTimeout(() => {
         console.log(jokes[randNum]["response"]);
-    }, 5000);
+    }, 3000);
 }
 
 /* CALLING FUNCTION */

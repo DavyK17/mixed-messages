@@ -33,7 +33,6 @@ const scriptInit = () => {
 /* JOKE RANDOMISER */
 
 const jokeGen = () => {
-    const disappointed = "\nArgh! You're no fun!";
     const jokes = [{
             question: "What do you call a government contract signed in a pub?",
             answers: ["bartender", "bar tender", "a bartender", "a bar tender"],
@@ -140,12 +139,15 @@ const jokeGen = () => {
     const laughs = ["Hahahahahaha xD", "ROFLMAO xDD", "I'm dying! xDD", "Too funny lol xD", "Hilarious! xDDD"];
     const randLaugh = Math.floor(Math.random() * laughs.length);
 
+    const disappointed = ["Argh! You're no fun!", "Damn! You ruined it!", "Well, there goes my punchline...", "Wow! Did you just Google that?", "I can't believe you saw that one coming..."];
+    const randDisappoint = Math.floor(Math.random() * disappointed.length);
+
     readline.question(`${jokes[randJoke]["question"]}\n>> `, response => {
         const lcResponse = response.toLowerCase();
         const answers = jokes[randJoke]["answers"];
         const responseGen = () => {
             if (answers.includes(lcResponse)) {
-                console.log(disappointed);
+                console.log(`${disappointed[randDisappoint]}`);
             } else {
                 console.log(`\n${jokes[randJoke]["response"]} ${laughs[randLaugh]}`);
             }
