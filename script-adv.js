@@ -147,7 +147,7 @@ const jokeGen = () => {
         const answers = jokes[randJoke]["answers"];
         const responseGen = () => {
             if (answers.includes(lcResponse)) {
-                console.log(`${disappointed[randDisappoint]}`);
+                console.log(`\n${disappointed[randDisappoint]}`);
             } else {
                 console.log(`\n${jokes[randJoke]["response"]} ${laughs[randLaugh]}`);
             }
