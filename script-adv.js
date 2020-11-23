@@ -127,7 +127,7 @@ const jokeGen = () => {
         {
             question: "How do celebrities stay cool?",
             answers: ["many fans", "they have many fans"],
-            response: "An IMPASTA!",
+            response: "They have MANY FANS!",
         },
         {
             question: "Which town do you go to if you want a good scare?",
