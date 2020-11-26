@@ -190,6 +190,6 @@ const goAgain = () => {
     });
 }
 
-/* CALLING FUNCTIONS */
+/* CALLING PROGRAM START */
 
 scriptInit();
