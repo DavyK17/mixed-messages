@@ -1,6 +1,6 @@
 # Mixed Messages
 
-For my "Mixed Messages" portfolio project on [Codecademy](https://codecademy.com/), my program auto-generates a random dad joke from a list of 20 in total. The program has a simplified version and an interactive version.
+This is a portfolio project I did as part of my full stack engineer course on [Codecademy](https://codecademy.com/). My program, built with JavaScript, auto-generates a random dad joke from a list of 20 in total, and is available in a simplified version and an interactive version.
 
 The program can be run on any Node.js-supported command line interface (CLI), but the following instructions are specific to Windows as that is the operating system that I personally use and am most familiar with.
 
