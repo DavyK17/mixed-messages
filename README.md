@@ -13,6 +13,8 @@ To download the program to your computer, click on the **green "Code" button** a
 ### Simplified version
 The program simply auto-generates a joke each time it is run. To run the program from the working directory, use the command `node script.js`.
 
+![Screenshot of program run in command line interface](/cli-screenshot.png)
+
 ### Interactive version
 The program uses the Node.js [`readline`](https://nodejs.org/api/readline.html) module to set up a joke with a question to which the user must guess the punchline; if the answer is wrong, the program provides the punchline and rolls on the floor laughing. If the answer is correct, the program expresses disappointment and asks the user if they would like another joke. The program is divided into 3 separate functions that work in tandem: the greeting function `scriptInit()` , the joke generator `jokeGen()` and the repeat question sequence `goAgain()`.
 
